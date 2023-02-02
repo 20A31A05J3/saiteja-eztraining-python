@@ -1,0 +1,227 @@
+CRT CLASS DAY-2 NOTES:-
+---------------------
+
+
+I.O's AND 1's(BITWISE OPERATORS):- Some operations if u do like dz it will be faster like - compressing data
+  ------------------------------   Sending data from one network to other network 
+							0 and 1 (or) ON and OFF (or) True and False
+						  Operations performed (bitwise(AND,OR,NOT,XOR{^}),LEFTSHIFT(<<),RIGHTSHIFT(>>))
+					example:-
+					-------
+					#1.get any numbers both numbers <=15 perform bitwise AND,OR,XOR
+
+					   a,b=int(input("ENTER A NUMBER a= ")),int(input("ENTER A NUMBER b= "))
+					   print(a)
+					   print(b)
+					   c=print("THE BITWISE AND value is: ")
+					   c=a&b
+					   print(c)
+					   d=print("THE BITWISE OR value is: ")
+					   d=a|b
+					   print(d)
+					   e=print("THE BITWISE XOR value is: ")
+					   e=a^b
+					   print(e)
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+II.LISTS:- Used inorder to get multiple inputs using only a single line
+   -----
+         E.G.:-#1.multiple inputs in a single line [in the code we can also print the code without strip()]
+	   ----      n=int(input("size:"))
+                  a=list(map(int,input("Numbers:").strip().split()))[:n]
+			  print(a)
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+III.INPUT STATEMENTS:-
+    ----------------
+1.seperator:- seperator is used to seperate the line 
+  ---------   syntax:- sep=''
+      ex:-print("its","a","good","day",sep='#')   |  out:-its#a#good#day
+          print("all","is","well")                |       all is well
+2.ender:-ender is used to finish the print statements in a single line
+  -----       syntax:- end=' '
+      ex:-print("its","a","good","day",end=' ')   |  out:-its a good day all is well
+          print("all","is","well")                |
+3.using both sep and end to write a program:-
+  -----------------------------------------
+  ex:-print("its","a","good","day",end=' ')       | out:-
+      print("all","is","well",sep='***',end=' ')  |    its a good day all***is***well joy
+      print("joy")                                |
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+IV.CONDITIONAL/CONTROL STATEMENTS:-
+   ------------------------------  
+1.simple if:-
+  ---------
+------------------------------------------------------------------------------------------------------------------
+
+2.if-else:-
+  -------
+------------------------------------------------------------------------------------------------------------------
+
+3.else-if or elif:-
+  ---------------
+    example:-1."""temp above 45 degree hottest
+			temp 25-40 degree modriate
+			temp 10-25 degree cold
+			temp 10 degree chill"""
+
+
+			a=int(input("THE TEMPERATURE IN THE CLIMATE IS:- "))
+			print(a)
+			if(a>45):
+			    print("THE CLIMATE IS HOTTEST")
+			elif((a>=25)&(a<=40)):
+			    print("THE CLIMATE IS MODERATE")
+			elif((a>=10)&(a<=25)):
+			    print("THE CLIMATE IS COLD")
+			elif(a<=10):
+			    print("THE CLIMATE IS CHILL")
+			else:
+			    print("THE CLIMATE IS NORMAL")
+		  
+-------------------------------------------------------------------------------------------------------------------
+4.else-if ladder:-
+  --------------
+
+-------------------------------------------------------------------------------------------------------------------
+
+5.nested if:-
+  ---------
+-------------------------------------------------------------------------------------------------------------------
+6.loops:-
+  -----
+LOOPS:- 
+   -----   
+(i).WHILE loops:-
+    -----------
+example for while loop:-
+----------------------
+#using while print first 10 numbers
+
+i=2
+while (i<=20):
+    if(i%2==0):
+        print(i)
+    i=i+1
+------------------------------------------
+#first 10 odd numbers using while
+
+i=2
+while (i<=20):
+    if(i%2!=0):
+        print(i)
+    i=i+1
+-------------------------------------------
+(iii)#guessing of a random number using while loop
+import random
+n=random.randrange(1,50)
+guess=int(input("ENTER ANY NUMBER: "))
+while n!=guess:
+    if guess<n:
+        print("TOO LOW")
+        guess=int(input("ENTER A NUMBER AGAIN: "))
+    elif guess>n:
+        print("TOO HIGH")
+        guess=int(input("ENTER A NUMBER AGAIN: "))
+    else:
+        break
+print("YOU HAVE GUESSED THE NUMBER CORRECT")
+--------------------------------------------
+
+----------------------------------------------------------
+(ii).FOR loops:- in for loop we have use range to define for loop i.e.range(m,n) where the numbers will be from m to 
+     ---------   (n-1)
+examples for for loops:-
+----------------------  
+#first 10 odd numbers using for loop
+
+for i in range(1,11):
+    if(i%2!=0):
+        print(i)
+--------------------------------------------------------
+#first 10 even numbers using for loop
+
+for i in range(1,11):
+    if(i%2==0):
+        print(i)
+--------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+V.PROGRAMS:-
+  --------
+1.#get a number as input and find out whether it is 500 or not
+a=int(input("ENTER A NUMBER n= "))
+if(a==500):
+    print("THE NUMBER IS EQUAL TO 500")
+else:
+    print("THE NUMBER IS NOT EQUAL TO 500")
+  --------------------------------------------------------------------
+2.#Check wheter the given number even+ve or odd+ve or even-ve or odd-ve
+
+a=int(input("THE GIVEN NUMBER BE:- "))
+if((a%2==0)&(a>0)):
+    print("THE GIVEN NUMBER IS EVEN POSITIVE NUMBER")
+elif((a%2!=0)&(a>0)):
+    print("THE GIVEN NUMBER IS ODD POSITIVE NUMBER")
+elif((a%2==0)&(a<0)):
+    print("THE GIVEN NUMBER IS EVEN NEGATIVE NUMBER")
+elif((a%2!=0)&(a<0)):
+    print("THE GIVEN NUMBER IS ODD NEGATIVE NUMBER")
+else:
+    print("THE NUMBER IS ZERO")
+  ----------------------------------------------------------------------
+3.#get 2 numbers as input and find the biggest number of them
+
+a,b=int(input("ENTER THE NUMBER a= ")),int(input("ENTER THE NUMBER b= "))
+print(a)
+print(b)
+if(a>b):
+    print("a IS THE BIGGEST")
+else:
+    print("b IS THE BIGGEST")
+   ----------------------------------------------------------------------
+4.#check whther the number is float or integer
+
+num=-8.98
+if type(num)==int:
+    print("THE NUMBER IS AN INTEGER")
+elif type(num)==float:
+    print("THE NUMBER IS A FLOAT")
+else:
+    print("THE NUMBER HAS A DIFFERNT DATATYPE")
+   ----------------------------------------------------------------------
+5.#get 3 numbers as input print the greatest number
+
+a,b,c=int(input("ENTER THE NUMBER a= ")),int(input("ENTER THE NUMBER b= ")),int(input("ENTER THE NUMBER c= "))
+print(a)
+print(b)
+print(c)
+if((a>b)&(a>c)):
+    print("a IS THE GREATEST")
+elif((b>a)&(b>c)):
+    print("b IS THE GREATEST")
+elif((c>a)&(c>b)):
+    print("c IS THE GREATEST")
+else:
+    print("error")
+   -------------------------------------------------------------------------
+6.#check whether the given number is divisible by 11 or not
+
+a=int(input("ENTER THE NUMBER a= "))
+if(a%11==0):
+    print("THE GIVEN NUMBER IS DIVISIBLE BY 11")
+else:
+    print("THE GIVEN NUMBER IS NOT DIVISIBLE BY 11")
+   -------------------------------------------------------------------------
+7.#check whether the number is divisible by both 2 and 5
+
+a=int(input("ENTER THE NUMBER a= "))
+print(a)
+if((a%2==0)&(a%5==0)):
+    print("THE GIVEN NUMBER IS DIVISIBLE BY BOTH 2 AND 5")
+else:
+    print("THE GIVEN NUMBER IS NOT DIVISIBLE BY BOTH 2 AND 5")
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
